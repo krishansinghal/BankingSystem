@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking System</title>
+</head>
+<body>
+  <h1>Banking System</h1>
+
+  <!-- Section for opening a new account -->
+  <h2>Open Your Account (fill the required details)</h2>
+  <input type="text" id="ownerName" placeholder="Account Holder Name" required>
+  <input type="number" id="initialBalance" placeholder="Initial Balance" required>
+  <button onclick="openAccount()">Open Account</button>
+
+  <!-- Section for deposit and withdrawal operations -->
+  <h2 id="accountActions" style="display:block;">Deposit/Withdraw from account</h2>
+  <input type="number" id="accNumber" placeholder="Account Number">
+  <input type="number" id="amount" placeholder="Amount">
+  <button onclick="deposit()">Deposit</button>
+  <button onclick="withdraw()">Withdraw</button>
+
+  <!-- Section for transferring money between accounts -->
+  <h3>Send Money to Other Account</h3>
+  <input type="number" id="sendTo" placeholder="Transfer To Account Number">
+  <button onclick="transfer()">Send</button>
+
+  <!-- Section for calculating and applying interest to an account -->
+  <h3>Calculate Account Interest</h3>
+  <input type="number" id="interestRate" placeholder="Interest Rate (%)">
+  <button onclick="accountInterest()">Account Interest</button>
+
+  <!-- Section for displaying selected account details -->
+  <h2 id="accountDetails" style="display:block;">Account Details</h2>
+  <select id="detailsAccountSelect" onchange="updateAccountDetailsAndHistory()">
+    <option value="">Select Account</option>
+  </select>
+  <pre id="details"></pre>
+
+  <!-- Section for displaying transaction history of the selected account -->
+  <h2 id="transactionHistory" style="display:block;">Transaction History</h2>
+  <ul id="historyList"></ul>
+
+  <!-- Section for displaying a list of all accounts with their details -->
+  <h2 id="allAccounts" style="display:block;">All Accounts</h2>
+  <ul id="accountsList"></ul>
+
+  <!-- Link to the JavaScript file containing the banking system logic -->
+  <script src="bank.js"></script>
+</body>
+</html>
