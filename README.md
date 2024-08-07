@@ -19,7 +19,7 @@ This is a simple web-based application for managing a bank account, allowing use
    ```
 
 
-### Actions
+### Funtions
 
 1. **Open Account**:
    - Enter the require details and click on open account button to create a new account.
@@ -43,7 +43,7 @@ This is a simple web-based application for managing a bank account, allowing use
    - Click the "Account Interest" button.
    - The interest will be added to your account balance.
 
-### Code Explanation
+### Code
 
 #### HTML
 
